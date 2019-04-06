@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    background-color: #cecece;
+}
+
+a {
+    cursor: pointer;
+}
+
+input {
+    background-color: #fff;
+    border: solid 3px #111;
+    border-radius: 10px;
+    color: #111;
+    cursor: pointer;
+    animation: 0.3s;
+    font-size: 16px;
+}
+
+input:hover {
+    background-color: #111;
+    border-color: #fff;
+    color: #fff;
+    transform: scale(1.04);
+    animation: 0.3s;
+}
+
+
+/* Tooltip */
+
+.tips {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    padding: 3px 10px;
+    font-size: 0.815em;
+    color: #fff;
+    border-radius: 100px 100px 3px 3px;
+    opacity: 0;
+    transform: rotateX(90deg);
+    transform-origin: 50% 100%;
+    transition: opacity 0.3s, transform 0.3s, border-radius 0.3s;
+}
+
+.tips::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #222;
+}
+
+.tips.visible {
+    opacity: 1;
+    border-radius: 3px;
+    transform: rotateX(0);
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Demo Nav with Icons</title>
+</head>
+
+<body>
+  <div class="menuToggle">Menu</div>
+  <ul>
+    <li>
+      <a href="#">
+        <div class="icon">
+          <i class="fa fa-home"></i>
+          <i class="fa fa-home"></i>
+        </div>
+        <div class="name"><span data-text="Home">Home</span></div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="icon">
+          <i class="fa fa-file-alt"></i>
+          <i class="fa fa-file-alt"></i>
+        </div>
+        <div class="name"><span data-text="About">About</span></div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="icon">
+          <i class="fa fa-wrench"></i>
+          <i class="fa fa-wrench"></i>
+        </div>
+        <div class="name"><span data-text="Services">Services</span></div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="icon">
+          <i class="fa fa-cogs"></i>
+          <i class="fa fa-cogs"></i>
+        </div>
+        <div class="name"><span data-text="Settings">Settings</span></div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="icon">
+          <i class="fa fa-comment"></i>
+          <i class="fa fa-comment"></i>
+        </div>
+        <div class="name"><span data-text="Contact">Contact</span></div>
+      </a>
+    </li>
+  </ul>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.menuToggle').click(function(){
+        $('ul').toggleClass('active')
+      })
+    })
+  </script>
+</body>
+
+</html>

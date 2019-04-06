@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Basic Responsive Navbar</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Logo</div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">About</a></li>
+          <li><a href="/">Services</a></li>
+          <li><a href="/">Team</a></li>
+          <li><a href="/">Portfolio</a></li>
+          <li><a href="/">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </header>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.menu-toggle').click(function() {
+          $('nav').toggleClass('active')
+        })
+
+        $('a').click(function(e) {
+          e.preventDefault()
+          $('a').parent().removeClass('active')
+          $(this).closest("li").addClass('active')
+          $('nav').toggleClass('active')
+        })
+      })
+    </script>
+  </body>
+</html>

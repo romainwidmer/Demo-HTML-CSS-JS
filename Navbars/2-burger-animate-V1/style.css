@@ -1,0 +1,46 @@
+#wrapper {
+	background:#29afd1;
+	display:inline-block;
+	border-radius:50%;
+	margin:10px;
+	position: relative;
+  padding: 7px;
+	cursor:pointer;
+}
+
+.main-item {
+	width:30px;
+	height:30px;
+	position:relative;
+}
+
+.line {
+	position: absolute;
+	height: 4px;
+	width: 100%;
+	background:white;
+	border-radius:10px;
+	transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.32s;
+}
+
+.line01 {
+	top:17%;
+}
+
+.line02 {
+	top:47%;
+}
+
+.line03 {
+	top:77%;
+}
+
+.menu.close .line01 {
+	transform:rotate(45deg);
+	top:49%;
+}
+
+.menu.close .line02, .menu.close .line03 {
+	transform:rotate(-45deg);
+	top:49%;
+}
