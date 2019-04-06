@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+:root {
+    --mainColor: #060c21;
+    --color-white: #fff;
+    --transitionTime: 0.5s;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--mainColor);
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 0 40px;
+}
+
+.container .box {
+    position: relative;
+    height: 520px;
+    background: var(--mainColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #000;
+}
+
+
+.container .box:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: var(--color-white);
+    transform: skew(2deg, 2deg);
+    z-index: -1;
+}
+
+.container .box:nth-child(1):before {
+    background: linear-gradient(315deg, #ff0057, #e64a19);
+}
+
+.container .box:nth-child(2):before {
+    background: linear-gradient(315deg, #89ff00, #00bcd4);
+}
+
+.container .box:nth-child(3):before {
+    background: linear-gradient(315deg, #e91e63, #5d02ff);
+}
+
+.container .box:nth-child(4):before {
+    background: linear-gradient(315deg, #ff0000, #ffc107);
+}
+
+.container .box:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+    pointer-events: none;
+}
+
+
+.content {
+    position: relative;
+    padding: 20px;
+    transform: translateY(40px);
+}
+
+/* Title h2 */
+.box .content h2 {
+    position: absolute;
+    top: -60px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    color: rgba(255,255,255,.05);
+    font-size: 10em;
+    transition: var(--transitionTime);
+}
+
+/* Title h2 on box hover */
+.box:hover .content h2 {
+    top: -140px;
+}
+
+
+/* Title h3 */
+.box .content h3 {
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+/* Paragraph */
+.box .content p {
+    margin: 0;
+    padding: 0;
+    color: var(--color-white);
+    font-size: 16px;
+}
+
+
+/* button "Read More" */
+.box .content a {
+    position: relative;
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: solid 1px var(--color-white);
+    display: inline-block;
+    color: var(--color-white);
+    transition: var(--transitionTime);
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* button "Read More" on box hover */
+.box:hover .content a {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* button "Read More" on hover */
+.container .box .content a:hover {
+    color: #000;
+    background: var(--color-white);
+}
