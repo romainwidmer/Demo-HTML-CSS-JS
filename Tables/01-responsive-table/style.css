@@ -28,6 +28,35 @@ tr:nth-child(odd) {
 }
 
 
+td span:first-child {
+    margin-right: 10px;
+}
+
+.btn-success {
+    background: transparent;
+    background: #64b4ec;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-danger {
+    background: transparent;
+    background: #800000;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
 @media screen and (max-width: 700px) {
     .table-responsive table,
     .table-responsive thead,
