@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Light Mouseover Effect</title>
+</head>
+<body>
+    <section>
+        <div class="light"></div>
+        <h2>Power Of Light</h2>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Ducimus veniam molestias unde architecto, accusamus eligendi 
+            repellat beatae dicta quo! Natus, doloribus quos incidunt 
+            similique mollitia id ducimus ullam temporibus doloremque.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Ducimus veniam molestias unde architecto, accusamus eligendi 
+            repellat beatae dicta quo! Natus, doloribus quos incidunt 
+            similique mollitia id ducimus ullam temporibus doloremque.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Ducimus veniam molestias unde architecto, accusamus eligendi 
+            repellat beatae dicta quo! Natus, doloribus quos incidunt 
+            similique mollitia id ducimus ullam temporibus doloremque.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Ducimus veniam molestias unde architecto, accusamus eligendi 
+            repellat beatae dicta quo! Natus, doloribus quos incidunt 
+            similique mollitia id ducimus ullam temporibus doloremque.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Ducimus veniam molestias unde architecto, accusamus eligendi 
+            repellat beatae dicta quo! Natus, doloribus quos incidunt 
+            similique mollitia id ducimus ullam temporibus doloremque.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Ducimus veniam molestias unde architecto, accusamus eligendi 
+            repellat beatae dicta quo! Natus, doloribus quos incidunt 
+            similique mollitia id ducimus ullam temporibus doloremque.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Ducimus veniam molestias unde architecto, accusamus eligendi 
+            repellat beatae dicta quo! Natus, doloribus quos incidunt 
+            similique mollitia id ducimus ullam temporibus doloremque.
+        </p>
+        <img src="img.jpeg" >
+    </section>
+
+    <script>
+        document.body.addEventListener('mousemove', function(e) {
+            var x = e.pageX;
+            var y = e.pageY;
+            var light = document.querySelector('.light')
+            
+            light.style.background = 'radial-gradient(circle at ' +x+ 'px ' +y+ 'px, transparent, #000 30%)'
+        })
+    </script>
+</body>
+</html>
