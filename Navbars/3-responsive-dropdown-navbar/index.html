@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive Dropdown Navbar</title>
+  </head>
+  <body>
+
+    <header>
+      <div class="logo">LOGO</div>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li class="sub-menu">
+              <a href="#">Services</a>
+              <ul>
+                <li><a href="#">Service 1</a></li>
+                <li><a href="#">Service 2</a></li>
+                <li><a href="#">Service 3</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </header>
+
+    <script type="text/javascript">
+      const nav = document.querySelector('nav')
+      const subMenus = document.querySelectorAll('ul li.sub-menu')
+
+      document.querySelector('.menu-toggle').addEventListener('click', () => {
+        toggleClass(nav)
+      })
+
+      subMenus.forEach((element) => {
+        console.log(element);
+        element.addEventListener('click', () => {
+          toggleClass(element)
+          console.log(element);
+        })
+      })
+
+
+      const toggleClass = function(element) {
+        if(element.classList.contains('active')) {
+          element.classList.remove('active')
+        } else {
+          element.classList.add('active')
+        }
+      }
+    </script>
+
+  </body>
+</html>
