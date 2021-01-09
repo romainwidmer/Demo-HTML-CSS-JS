@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Portfolio</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="landing">
+        <img src="./circles.svg" alt="">
+        <h1>Dots</h1>
+    </section>
+    
+    <script>
+        const burger = document.querySelector('.burger')
+        const navUls = document.querySelector('nav ul')
+        const navLis = document.querySelectorAll('nav ul li')
+
+        burger.addEventListener('click', () => {
+            navUls.classList.toggle('active')
+            navLis.forEach(li => li.classList.toggle('fade'))
+        })
+    </script>
+</body>
+</html>

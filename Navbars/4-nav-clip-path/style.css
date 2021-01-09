@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #5b78c7;
+    height: 10vh;
+    position: relative;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+}
+
+.landing {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing h1 {
+    margin: 100px;
+    font-size: 50px;
+    color: #ae5fce;
+}
+
+@media screen and (max-width: 780px) {
+    .burger {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translate(0, -50%);
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .burger .line {
+        width: 35px;
+        height: 2px;
+        background-color: #fff;
+        margin-bottom: 7px;
+    }
+
+    .burger .line:last-child {
+        margin: 0;
+    }
+
+    nav ul {
+        position: fixed;
+        background-color: #5b78c7;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        clip-path: circle(100px at 90% -10%);
+        transition: 1s ease-out;
+    }
+
+    nav ul.active {
+        clip-path: circle(1000px at 85% 20%);
+    }
+
+    nav ul li {
+        margin: 15px 0;
+        opacity: 0;
+    }
+
+    nav ul li.fade {
+        opacity: 1;
+    }
+
+    nav ul li:nth-child(1) {
+        transition: all 0.5s ease 0.1s;
+    }
+    nav ul li:nth-child(2) {
+        transition: all 0.5s ease 0.2s;
+    }
+    nav ul li:nth-child(3) {
+        transition: all 0.5s ease 0.3s;
+    }
+    nav ul li:nth-child(4) {
+        transition: all 0.5s ease 0.4s;
+    }
+
+    nav ul li a {
+        font-size: 32px;
+        position: relative;
+        padding: 5px 0;
+    }
+
+    nav ul li a:before,
+    nav ul li a:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background-color: #fff;
+        transition: .5s;
+    }
+
+    nav ul li a:before {
+        top: 0;
+        right: 0;
+    }
+
+    nav ul li a:after {
+        bottom: 0;
+        left: 0;
+    }
+
+    nav ul li:hover a:before {
+        width: 100%;
+    }
+
+    nav ul li:hover a:after {
+        width: 100%;
+    }
+}
