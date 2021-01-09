@@ -1,0 +1,122 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+
+/* Spinner loader */
+.spinner {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.spinner div {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 8px solid transparent;
+    border-radius: 50%;
+}
+
+.spinner div:nth-child(1) {
+    border-top-color: #ad60f5;
+    animation: 1.2s spinnerOne linear infinite;
+}
+
+.spinner div:nth-child(2) {
+    border-bottom-color: #ad60f5;
+    animation: 1.2s spinnerTwo linear infinite;
+}
+
+@keyframes spinnerOne {
+    0% { transform: rotate(0deg); border-width: 10px; }
+    50% { transform: rotate(180deg); border-width: 1px; }
+    100% { transform: rotate(360deg); border-width: 10px; }
+}
+
+@keyframes spinnerTwo {
+    0% { transform: rotate(0deg); border-width: 1px; }
+    50% { transform: rotate(180deg); border-width: 10px; }
+    100% { transform: rotate(360deg); border-width: 1px; }
+}
+
+
+/* Bouncing balls loader */
+.bouncer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100px;
+    height: 100px;
+}
+
+.bouncer div {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #0077ff;
+    animation: 0.8s bounce cubic-bezier(.19, .57, .3, .98) infinite alternate;
+}
+
+.bouncer div:nth-child(2) {
+    animation-delay: 0.1s;
+    opacity: 0.8;
+}
+
+.bouncer div:nth-child(3) {
+    animation-delay: 0.2s;
+    opacity: 0.6;
+}
+
+.bouncer div:nth-child(4) {
+    animation-delay: 0.3s;
+    opacity: 0.2;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100px); }
+}
+
+
+/* Flipping squares loader */
+.square {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    perspective: 200px;
+}
+
+.square div {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: coral;
+    animation: 2s flip linear infinite;
+    transform-origin: right bottom;
+}
+
+.square div:nth-child(2) {
+    animation-delay: 1s;
+    opacity: 0.5;
+}
+
+@keyframes flip {
+    0% { transform: rotateX(0) rotateY(0); }
+    25% { transform: rotateX(0) rotateY(180deg); }
+    50% { transform: rotateX(180deg) rotateY(180deg); }
+    75% { transform: rotateX(180deg) rotateY(0); }
+    100% { transform: rotateX(0) rotateY(0); }
+}
