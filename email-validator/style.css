@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 24px;
+    color: #999;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+form {
+
+}
+
+form .form-group {
+    position: relative;
+}
+
+form label {
+    position: absolute;
+    top: 30px;
+    left: 5px;
+    font-size: 14px;
+    color: #555;
+    z-index: -1;
+    transition: .3s;
+}
+
+form input {
+    width: 400px;
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    outline: navajowhite;
+    padding: 5px 50px 5px 5px;
+    background: transparent;
+    color: #999;
+    border: solid 2px #131313;
+    background: linear-gradient(#1e2024, #18181c);
+    margin-top: 30px;
+}
+
+form.valid label, 
+form.invalid label {
+    top: 5px;
+}
+
+form .form-group .indicator {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    width: 10px;
+    height: 10px;
+    background: #555;
+    border-radius: 50%;
+}
+
+form.valid .form-group .indicator {
+    background-color: #0f0;
+    box-shadow: 0 0 5px #0f0,
+                0 0 10px #0f0,
+                0 0 20px #0f0,
+                0 0 40px #0f0;
+}
+
+form.invalid .form-group .indicator {
+    background-color: #f00;
+    box-shadow: 0 0 5px #f00,
+                0 0 10px #f00,
+                0 0 20px #f00,
+                0 0 40px #f00;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Form validator</h1>
+        <form>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    placeholder="Enter your e-mail" 
+                    autocomplete="off"
+                    onkeyup="handleChange();"
+                />
+                <span class="indicator"></span>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const form = document.querySelector('form')
+        const email = document.querySelector('#email')
+        const regex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+
+        const handleChange = () => {
+            if(email.value.match(regex)) {
+                form.classList.remove('invalid')
+                form.classList.add('valid')
+            } else {
+                form.classList.remove('valid')
+                form.classList.add('invalid')
+            }
+
+            if(email.value === '') {
+                form.classList.remove('invalid')
+                form.classList.remove('valid')
+            }
+        }
+    </script>
+</body>
+</html>
